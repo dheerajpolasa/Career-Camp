@@ -3,7 +3,7 @@ const env = require('../config/environment');
 
 // Connect to db
 mongoose.connect(
-  `mongodb+srv://${env.db_username}:${env.db_password}@cluster0-ggz5m.mongodb.net/${env.db}?retryWrites=true&w=majority`,
+  `mongodb+srv://${env.db_username}:${env.db_password}@${env.db_cluster}/${env.db}?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 

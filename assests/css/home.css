@@ -1,0 +1,30 @@
+#home-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  #home-container #students-section {
+    width: 40%;
+    margin: 5%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black; }
+    #home-container #students-section #students-list {
+      margin: 2%; }
+  #home-container #interviews-section {
+    width: 40%;
+    margin: 5%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black; }
+    #home-container #interviews-section #interviews-list {
+      margin: 2%; }
+
+.list-group .list-group-item {
+  width: 400px; }

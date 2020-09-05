@@ -1,1 +1,39 @@
-<h1> Welcome Employee <%= title %></h1>
+<link rel="stylesheet" href="/css/home.css">
+<% if (locals.user) {%>
+<h1>Welcome Employee <%= user.email %></h1>
+
+<section id="home-container">
+    <section id="students-section">
+        <div id="student-actions">
+            <a href="#">New student</a>
+        </div>
+        <div id="students-list">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                    Cras justo odio
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+            </div>
+        </div>
+    </section>
+    <section id="interviews-section">
+        <div id="interview-actions">
+            <a href="#">New Interview</a>
+        </div>
+        <div id="interviews-list">
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                    Cras justo odio
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+            </div>
+        </div>
+    </section>
+</section>
+<%}%>
