@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
+const env = require('../config/environment');
 
 // Connect to db
 mongoose.connect(
-  'mongodb+srv://career-camp:w7iWoeD3WGScivwP@cluster0-ggz5m.mongodb.net/career-camp?retryWrites=true&w=majority',
+  `mongodb+srv://${env.db_username}:${env.db_password}@cluster0-ggz5m.mongodb.net/${env.db}?retryWrites=true&w=majority`,
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 

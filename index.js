@@ -6,6 +6,14 @@ const PORT = 8000;
 const mongoose = require('mongoose');
 const db = require('./config/mongoose');
 
+const expressLayouts = require('express-ejs-layouts');
+const expressPartials = require('express-partial');
+
+app.use(expressLayouts);
+app.use(expressPartials());
+
+app.use(express.urlencoded());
+
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
