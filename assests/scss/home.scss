@@ -1,43 +1,163 @@
 #home-container {
     display: flex;
+    width: 100%;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     // border: 2px solid black;
 
     #students-section {
         width: 40%;
-        margin: 5%;
+        // height: 50vh;
+        margin: auto;
+        margin-top: 0;
         padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 2px solid black;
+        // border: 2px solid black;
 
-        #students-list {
+        #students-list-wrapper {
             margin: 2%;
+
+            #students-list {
+                button {
+                    outline: none;
+                    background: inherit;
+                }
+            }
+        }
+
+        #download-csv-btn {
+            a {
+                color: white;
+                text-decoration: none;
+            }
         }
     }
 
     #interviews-section {
         width: 40%;
-        margin: 5%;
+        // height: 50vh;
+        margin: auto;
+        margin-top: 0;
         padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 2px solid black;
+        // border: 2px solid black;
 
-        #interviews-list {
+        #interviews-list-wrapper {
             margin: 2%;
+
+            #interviews-list {
+
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
         }
     }
+
 }
 
 .list-group {
     .list-group-item {
         width: 400px;
     }
+}
+
+.modal-body {
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin: 2%;
+        padding: 10px;
+
+        input {
+            margin: 2%;
+            padding: 10px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            select {
+                margin: 2%;
+            }
+        }
+    }
+}
+
+#student-details-modal-body,
+#interview-details-modal-body {
+    .card {
+        border: none;
+
+        .list-group {
+            outline: none;
+
+            border: none;
+
+            .list-group-item {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 2%;
+                padding: 10px;
+                border: 2px solid lightcyan;
+            }
+        }
+
+        #update-interview-form {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            // border: 2px solid black;
+        }
+    }
+}
+
+#create-student-modal {
+    .modal-dialog {
+        .modal-content {
+            .modal-header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+#new-interview-form {
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+#sign-in-form {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+}
+
+#sign-up-form {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    flex-direction: column;
 }

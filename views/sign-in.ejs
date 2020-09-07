@@ -1,5 +1,29 @@
-<form action="/employee/create-session" method="POST" id="sign-in-form">
+<!-- <form action="/employee/create-session" method="POST" id="sign-in-form">
     <input type="email" name="email" placeholder="Enter your email" required>
     <input type="password" name="password" placeholder="Enter your password" required>
     <input type="submit" value="Sign In">
+</form> -->
+<link rel="stylesheet" href="/css/home.css">
+<!-- Default form login -->
+<form class="text-center border border-light p-5 col-xs-4" action="/employee/create-session" method="POST"
+    id="sign-in-form">
+
+    <p class="h4 mb-4">Sign in</p>
+
+    <!-- Email -->
+    <input type="email" name="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+    <!-- Password -->
+    <input type="password" name="password" id="defaultLoginFormPassword" class="form-control mb-4"
+        placeholder="Password">
+
+    <!-- Sign in button -->
+    <button class="btn btn-info btn-block my-4" type="submit">Sign in</button>
+
+    <!-- Register -->
+    <p>Not a member?
+        <a href="/employee/sign-up">Register</a>
+    </p>
+
 </form>
+<!-- Default form login -->

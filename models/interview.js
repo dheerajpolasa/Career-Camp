@@ -14,6 +14,11 @@ const interviewSchema = mongoose.Schema(
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Student',
     },
+    result: {
+      type: String,
+      enum: ['PASS', 'FAILED', 'On Hold', 'Did not Attempt'],
+      default: 'On Hold',
+    },
   },
   {
     timestamps: true,

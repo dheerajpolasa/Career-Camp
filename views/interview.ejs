@@ -1,0 +1,70 @@
+<div id="interview-actions">
+    <!-- <a href="#">New Interview</a> -->
+    <!-- New Interview Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#create-interview-modal">
+        New Interview
+    </button>
+
+    <!-- Interview Modal -->
+    <div class="modal fade" id="create-interview-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">New Interview</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/interview/create" id="new-interview-form">
+                        <input type="text" name="company" placeholder="Enter the company name" />
+                        <input type="date" name="date" />
+                        <div>
+                            <div id="student-list-loader" style="display: none;">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <select class="custom-select" id="students-list-dropdown" name="student">
+                                <option selected>Select the student</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="new-interview-btn">
+                        Submit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="interviews-list-wrapper">
+    <div class="list-group" id="interviews-list">
+        <% for (interview of interviews) { %>
+        <a data-url="/interview/<%= interview.id %>" data-toggle="modal" data-target="#interview-details-modal"
+            class="list-group-item list-group-item-action interview-modal-link">
+            <span><%= interview.student.name %></span><span><%= interview.company %></span>
+        </a>
+        <%}%>
+    </div>
+
+    <div class="modal fade" id="interview-details-modal" tabindex="-1" role="dialog"
+                aria-labelledby="interviewDetailsLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Interview Details</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="interview-details-modal-body">
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,9 +1,35 @@
-<form action="/employee/create" method="POST" id="sign-up-form">
+<link rel="stylesheet" href="/css/home.css">
+<!-- <form>
     <input type="text" name="name" placeholder="Enter your name" required>
     <input type="email" name="email" placeholder="Enter your email" required>
     <input type="password" name="password" placeholder="Enter your password" required>
     <input type="password" name="confirm-password" placeholder="Enter your password" required>
     <input type="submit" value="Sign Up">
-</form>
+</form> -->
 
 <script src="/js/form.js"></script>
+
+<!-- Default form register -->
+<form class="text-center border border-light p-5" action="/employee/create" method="POST" id="sign-up-form">
+
+    <p class="h4 mb-4">Sign up</p>
+
+    <!-- Name -->
+    <input type="text" name="name" class="form-control mb-4" placeholder="Name">
+
+    <!-- E-mail -->
+    <input type="email" name="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail">
+
+    <!-- Password -->
+    <input type="password" name="password" id="defaultRegisterFormPassword" class="form-control mb-4"
+        placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+
+    <input type="password" name="confirm-password" id="defaultRegisterFormConfirmPassword" class="form-control"
+        placeholder="Confirm Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+
+    <!-- Sign up button -->
+    <button class="btn btn-info my-4 btn-block" type="submit">Sign Up</button>
+    <hr>
+
+</form>
+<!-- Default form register -->

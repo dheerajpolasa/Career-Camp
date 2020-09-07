@@ -1,30 +1,102 @@
 #home-container {
   display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center; }
   #home-container #students-section {
     width: 40%;
-    margin: 5%;
+    margin: auto;
+    margin-top: 0;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border: 2px solid black; }
-    #home-container #students-section #students-list {
+    align-items: center; }
+    #home-container #students-section #students-list-wrapper {
       margin: 2%; }
+      #home-container #students-section #students-list-wrapper #students-list button {
+        outline: none;
+        background: inherit; }
+    #home-container #students-section #download-csv-btn a {
+      color: white;
+      text-decoration: none; }
   #home-container #interviews-section {
     width: 40%;
-    margin: 5%;
+    margin: auto;
+    margin-top: 0;
     padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border: 2px solid black; }
-    #home-container #interviews-section #interviews-list {
+    align-items: center; }
+    #home-container #interviews-section #interviews-list-wrapper {
       margin: 2%; }
+      #home-container #interviews-section #interviews-list-wrapper #interviews-list a {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
 
 .list-group .list-group-item {
   width: 400px; }
+
+.modal-body form {
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 10px; }
+  .modal-body form input {
+    margin: 2%;
+    padding: 10px; }
+  .modal-body form div {
+    display: flex;
+    flex-direction: column; }
+    .modal-body form div select {
+      margin: 2%; }
+
+#student-details-modal-body .card,
+#interview-details-modal-body .card {
+  border: none; }
+  #student-details-modal-body .card .list-group,
+  #interview-details-modal-body .card .list-group {
+    outline: none;
+    border: none; }
+    #student-details-modal-body .card .list-group .list-group-item,
+    #interview-details-modal-body .card .list-group .list-group-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 2%;
+      padding: 10px;
+      border: 2px solid lightcyan; }
+  #student-details-modal-body .card #update-interview-form,
+  #interview-details-modal-body .card #update-interview-form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+
+#create-student-modal .modal-dialog .modal-content .modal-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+#new-interview-form div {
+  display: flex;
+  flex-direction: row; }
+
+#sign-in-form {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black; }
+
+#sign-up-form {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  flex-direction: column; }

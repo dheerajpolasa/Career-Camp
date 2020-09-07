@@ -1,8 +1,15 @@
-module.exports.home = function (req, res) {
+const Student = require('../models/student');
+const Interview = require('../models/interview');
+
+module.exports.home = async function (req, res) {
   try {
-    console.log('hey');
+    const students = await Student.find({});
+
+    const interviews = await Interview.find({}).populate('student');
+
     return res.render('home', {
-      title: 'Dheeraj',
+      students: students,
+      interviews: interviews,
     });
   } catch (err) {}
 };

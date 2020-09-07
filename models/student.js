@@ -21,7 +21,7 @@ const studentSchema = mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ['Placed', 'Not_placed'],
+      enum: ['Placed', 'Not Placed'],
     },
     batch: {
       type: String,
